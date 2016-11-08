@@ -1,0 +1,11 @@
+class Vector:
+    def __init__(self, x=0, y=0):
+        l = str(x).split(',')
+        self.x = float(l[0])
+        self.y = float(l[1])
+    def __sub__(self, oth):
+        return Vector(self.x - oth.x, self.y - oth.y)
+    def __mul__(self, oth):
+        return Vector(self.x * oth.x, self.y * oth.y)
+    def __add__(self, oth):
+        return Vector(self.x + oth.x, self.y + oth.y)
