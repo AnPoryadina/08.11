@@ -19,4 +19,4 @@ for i in range(n):
     if float(abs(a[i]))> p:
         p=abs(a[i])
         ip=i
-print('the gratest distanse', a[ip])
+print('the greatest distance', a[ip])
