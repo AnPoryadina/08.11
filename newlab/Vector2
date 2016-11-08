@@ -1,0 +1,22 @@
+class Vector:
+    def __init__(self, x=0, y=0):
+        l = str(x).split(',')
+        self.x = float(l[0])
+        self.y = float(l[1])
+    def __sub__(self, oth):
+        return Vector(self.x - oth.x, self.y - oth.y)
+    def __mul__(self, oth):
+        return Vector(self.x * oth.x, self.y * oth.y)
+    def __add__(self, oth):
+        return Vector(self.x + oth.x, self.y + oth.y)
+
+n = int(input())
+a = []
+p = 0
+ip = 0
+for i in range(n):
+    a.append(Vector(input()))
+    if float(abs(a[i]))> p:
+        p=abs(a[i])
+        ip=i
+print('the gratest distanse', a[ip])
